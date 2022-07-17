@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdNW1caBgJkmwsuJ4Cg/lQgAAAAACAAAAAAAQZgAAAAEAACAAAAB0UByd8Qtu802bZoAmEliOIkPA513GG8ZsUrjA0RfytgAAAAAOgAAAAAIAACAAAAD19QuaSzX2Qk1PvN/2TvfMoexLdup3lY+gG+39qBSKRIAAAACpm2sAvodEM/++/w0xNpy0P7bcV0Uw3/zPuMVDB0XQYopF+l4SqfEWW34E3ylI+BC1coEibA+8xWBBE1epdEBGybYI9nMXtr4VGe7m2OpzYaMFVOj0MJ8bOYBObnbsiRDaS8s3vGgd68Z18GwWf5MUVcvMjGw7vl4KkuPYJEg9gUAAAAC5YaV05pXFM3+0JhFCR8eYI+s3q65/zvtaD1v13PVbdoWc5nxPT5zq6gQmiFJqnwnIjMioARdLPi02wDpuhTnb</EncryptedPassword>
+    <History>True|2022-06-27T16:42:00.0486962Z;True|2022-06-20T16:28:31.5523405+06:00;False|2022-06-20T16:23:06.2426787+06:00;True|2022-06-14T01:31:47.0332742+06:00;True|2022-06-14T01:12:56.3136494+06:00;False|2022-06-14T00:56:27.8192178+06:00;True|2022-06-14T00:40:40.2897159+06:00;True|2022-06-13T23:51:01.3451193+06:00;True|2022-06-07T00:31:09.3088478+06:00;True|2022-06-07T00:27:33.7907768+06:00;True|2022-06-07T00:22:28.5976832+06:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="HospitalAPI.DataAccess.Data.ApplicationDbContext">
+      <Value>Server=outreachhospitaldbserver.database.windows.net%3bInitial Catalog=OutreachHospicalDevDB%3bUser ID=sqladmin%3bPassword=0utReach%40123%3bMultipleActiveResultSets=True%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

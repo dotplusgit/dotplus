@@ -1,0 +1,130 @@
+.loginForm {
+    padding-top: 0% !important ;
+    padding: 5%;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .loginForm {
+        width: 80%;
+        margin: auto;
+      }
+
+    .col-firstName{
+        width: 48%;
+        margin-right: 2%;
+    }
+    .col-lastName{
+        width: 48%;
+        margin-left: 2%;
+    }
+    .col-hospitalId{
+        width: 30%;
+        margin-right: 2%;
+    }
+    .col-branchId{
+        width: 30%;
+        margin-right: 2%;
+    }
+    .col-address{
+        width: 40%;
+        margin-right: 1%;
+    }
+    .col-division{
+        width: 18%;
+        margin: 1%;
+    }
+    .col-district{
+        width: 18%;
+        margin: 1%;
+    }
+    .col-upazila{
+        width: 18%;
+        margin-left: 1%;
+    }
+    .col-nid{
+        width: 34%;
+        margin-left: 2%;
+    }
+
+    .col-mobileNumber{
+        width: 58%;
+        margin-right: 2%;
+    }
+    .col-doB{
+        width: 38%;
+        margin-left: 2%;
+    }
+    .col-age{
+        width: 32%;
+        margin-right: 2%;
+    }
+    .col-gender{
+        width: 32%;
+        margin-right: 2%;
+    }
+    .col-maritalStatus{
+        width: 32%;
+        margin-right: 2%;
+    }
+    .col-bloodGroup{
+        width: 32%;
+    }
+    .col-covidvaccine {
+        margin-right: 1%;
+    }
+    .col-vaccineBrand {
+        margin-right: 1%;
+    }
+    .col-note{
+        display: block;
+        margin: auto;
+    }
+    [class*="col-v-"] {
+        margin: 1%;
+        width: 23%;
+      }
+      [class*="col-d-"] {
+        margin: 1%;
+        width: 15%;
+      }
+    
+}
+
+
+    /* For mobile phones: */
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+      }
+      .mat-form-field {
+          width: 100%;
+      }
+      .loginForm {
+          width: 100%;
+      }
+}
+td {
+    padding-right: 8px;
+  }
+
+.updatebutton {
+    width: 250px;
+      background-color: #fff;
+      color: #787878;
+}
+button {
+    background-color: #fff;
+    cursor: pointer;
+    color: #787878;
+    height: 45px;
+    margin: 5px;
+    font-size: 18px;
+    align-items: center;
+}
+button:hover {
+    color: black;
+}
+.addbutton {
+    
+  }

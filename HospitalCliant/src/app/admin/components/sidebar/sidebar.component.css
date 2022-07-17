@@ -1,0 +1,48 @@
+#toolbar {
+  background-color: #eae0c8;
+}
+#logo {
+  border-radius: 4px;
+  margin-bottom: 5px;
+  width: 85px;
+}
+#logo:hover {
+  cursor: pointer;
+}
+.menu-spacer {
+  flex: 1 1 auto;
+}
+.active{
+border-bottom: 1vw solid white;
+}
+.mat-button:hover{
+background-color: #ebcd89;
+color: #000000 ;
+}
+.router-link-active {
+  background-color: #ebc264;
+  color: #000000 ;
+}
+.mat-menu-item {
+  color: rgb(0, 0, 0) !important;
+}
+
+button.mat-menu-item:hover {
+    background-color: #ebc264;
+
+}
+
+::ng-deep .my-class{
+  background-color: #eae0c8;
+}
+.mat-button {
+  border: 1px solid rgb(0, 0, 0);
+  margin: 2px;
+  padding: auto;
+  width: auto;
+  font-size: 1vw !important;
+}
+/* .router-link-active{
+  background-color: white;
+  color: #3f51b5 ;
+} */

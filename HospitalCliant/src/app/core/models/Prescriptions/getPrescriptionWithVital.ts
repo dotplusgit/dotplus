@@ -1,0 +1,87 @@
+export interface PhysicalStat {
+    id: number;
+    hospitalId: number;
+    hospitalName: string;
+    patientId: number;
+    patientFirstName: string;
+    patientLastName: string;
+    visitEntryId: number;
+    bloodPressureSystolic: string;
+    bloodPressureDiastolic: string;
+    heartRate: string;
+    bodyTemparature: string;
+    appearance: string;
+    anemia: string;
+    jaundice: string;
+    dehydration: string;
+    edema: string;
+    cyanosis: string;
+    heart: string;
+    lung: string;
+    abdomen: string;
+    kub: string;
+    rbsFbs: string;
+    heightFeet: number;
+    heightInches: number;
+    weight: number;
+    bmi: number;
+    waist: string;
+    hip: string;
+    spO2: number;
+    pulseRate: number;
+    isLatest: boolean;
+    createdOn: Date;
+    createdBy: string;
+    editedOn: Date;
+    editedBy: string;
+}
+export interface GeneralExamination {
+    id: number;
+    appearance: boolean;
+    anemia: boolean;
+    jundice: boolean;
+    dehydration: boolean;
+    edema: boolean;
+    cyanosis: boolean;
+    heart: boolean;
+    lung: boolean;
+    abdomen: boolean;
+    kub: boolean;
+}
+
+export interface IPrescriptionWithVital {
+    id: number;
+    hospitalId: number;
+    hospitalName: string;
+    patientId: number;
+    patientFirstName: string;
+    patientLastName: string;
+    patientDob: Date;
+    patientAge: number;
+    patientMobile: string;
+    patientBloodGroup: string;
+    patientGender: string;
+    physicalStat: PhysicalStat[];
+    generalExamination: GeneralExamination;
+    doctorId: string;
+    doctorFirstName: string;
+    doctorLastName: string;
+    bmdcRegNo: string;
+    optionalEmail: string;
+    visitEntryId: number;
+    doctorsObservation: string;
+    adviceMedication: string;
+    adviceTest: string;
+    systemicExamination: string;
+    historyOfPastIllness: string;
+    familyHistory: string;
+    allergicHistory: string;
+    oh: string;
+    mh: string;
+    dx: string;
+    nextVisit: Date;
+    isTelimedicine: boolean;
+    note: string;
+    createdOn: Date;
+    updatedOn: Date;
+}

@@ -1,0 +1,68 @@
+#toolbar {
+  background-color: #ffffff;
+}
+#logo {
+  border-radius: 4px;
+  margin-bottom: 5px;
+  width: 85px;
+}
+#logo:hover {
+  cursor: pointer;
+}
+.menu-spacer {
+  flex: 1 1 auto;
+}
+.mat-button {
+  background-color: #ffffff;
+  color: #807777 !important;
+  /* border: 1px solid rgb(0, 0, 0); */
+  margin: 2px;
+  padding: auto;
+  width: auto;
+  font-size: 1vw !important;
+}
+.mat-button:hover{
+background-color: #ffffff;
+color: #000000 !important;
+}
+
+.mat-menu-item {
+  background-color: #ffffff;
+  color: #807777 !important;
+  font-size: 1vw !important;
+}
+button.mat-menu-item:hover {
+    color: #000000 !important;
+    background-color: #ffffff;
+}
+.router-link-active {
+  background-color: #ffffff;
+  color: #000000 !important;
+}
+::ng-deep .my-class{
+  background-color: #ffffff;
+}
+
+.mat-tree-node {
+  padding-right: 10px;
+  font-size: 16px !important;
+  min-height: 10px;
+  max-height: 40px !important;
+}
+mat-tree-node {
+  padding-left: 0px !important;
+}
+.mat-icon-button {
+  font-size: 16px;
+  font-weight: normal;
+}
+.mat-tree-node:hover {
+  background: rgb(255, 255, 255);
+}
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+  height: 36px;
+}
+.sub-icon {
+  font-size: 20px !important;
+  float: left !important;
+}

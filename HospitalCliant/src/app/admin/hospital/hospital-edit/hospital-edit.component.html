@@ -1,0 +1,66 @@
+<app-title [title]="title"></app-title>
+<body>
+    <button mat-button [routerLink]="['../../hospitals']" >Back</button>
+      <div class="loginForm">
+          <form [formGroup]="updateHospitalForm" (ngSubmit)="onSubmit()">
+              <mat-form-field>
+                  <mat-label>Hospital Name</mat-label>
+                  <input [value]="hospital.name" required formControlName="name" matInput maxlength="80">
+                  <mat-error *ngIf="f.name.hasError('required')">Required</mat-error>
+                  <mat-error *ngIf="f.name.hasError('maxlength')">Maximum 80 charecter</mat-error>
+              </mat-form-field><br>
+              <mat-form-field class="col-branchId" appearance="fill">
+                <mat-label>Branch</mat-label>
+                <mat-select formControlName="branchId">
+                  <mat-option>--</mat-option>
+                  <mat-option *ngFor="let branch of branches" [value]="branch.id">
+                    {{branch.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="f.branchId.hasError('required')">Please choose Branch</mat-error>
+              </mat-form-field> <br>
+              <mat-form-field>
+                  <mat-label>Address</mat-label>
+                  <input required formControlName="address" matInput >
+                  <mat-error *ngIf="f.address.hasError('required')">Required</mat-error>
+                  <mat-error *ngIf="f.address.hasError('maxlength')">Maximum 200 charecter</mat-error>
+              </mat-form-field><br>
+              <mat-form-field class="col-division" appearance="fill">
+                <mat-label>Division</mat-label>
+                <!-- (click)="loadUpazilaBySelectDistrict(upazila.id)" -->
+                <mat-select formControlName="divisionId" #chooseddivValue required (valueChange)="loadDistrictBySelectDivision(chooseddivValue.value)">
+                  <mat-option>--</mat-option>
+                  <mat-option *ngFor="let division of divisions" [value]="division.id">
+                    {{division.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="f.divisionId.hasError('required')">Required</mat-error>
+              </mat-form-field><br>
+              <mat-form-field class="col-district" appearance="fill">
+                <mat-label>District</mat-label>
+                <!-- (click)="loadUpazilaBySelectDistrict(upazila.id)" -->
+                <mat-select formControlName="districtId" #choosedValue required (valueChange)="loadUpazilaBySelectDistrict(choosedValue.value)">
+                  <mat-option>--</mat-option>
+                  <mat-option *ngFor="let district of districts" [value]="district.id">
+                    {{district.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="f.districtId.hasError('required')">Required</mat-error>
+              </mat-form-field><br>
+              <mat-form-field class="col-upazila" appearance="fill">
+                <mat-label>Upazila</mat-label>
+                <mat-select formControlName="upazilaId" required>
+                  <mat-option>--</mat-option>
+                  <mat-option *ngFor="let upazila of upazilas" [value]="upazila.id" >
+                    {{upazila.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="f.upazilaId.hasError('required')">Required</mat-error>
+              </mat-form-field><br>
+                  <mat-checkbox formControlName="isActive" class="active">Active</mat-checkbox>
+  
+                  <br/><button mat-raised-button color="accent" type="submit">Save</button>
+              
+          </form>    
+      </div>
+  </body>

@@ -1,0 +1,109 @@
+<app-title [title]="title"></app-title>
+<button mat-button (click)="goBack()" >Back</button>
+<body class="userdetails">
+
+    <mat-card class="example-card">
+        <mat-card-header>
+        <mat-card-title>{{physicalStateDetails.id}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <table class="table">
+
+                <tr>
+                    <td>Hospital Name</td>
+                    <td>{{physicalStateDetails.hospitalName}}</td>
+                </tr>
+                <tr>
+                    <td>Patient ID </td>
+                    <td>{{physicalStateDetails.patientId}}</td>
+                    </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>{{physicalStateDetails.patientFirstName}} {{physicalStateDetails.patientLastName}}</td>
+                    </tr>
+                <tr>
+                    <td>Visit Id</td>
+                    <td>{{physicalStateDetails.visitEntryId}}</td>
+                </tr>
+                <tr>
+                    <td>Blood Pressure</td>
+                    <td>  {{physicalStateDetails.bloodPressureSystolic}}/{{physicalStateDetails.bloodPressureDiastolic}} mmHg</td>
+                </tr>
+                <tr>
+                    <td>Heart Rate</td>
+                    <td>{{physicalStateDetails.heartRate}}</td>
+                </tr>
+                <tr>
+                    <td>Body Temparature</td>
+                    <td>{{physicalStateDetails.bodyTemparature}}</td>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td>{{physicalStateDetails.heightFeet}}'{{physicalStateDetails.heightInches}}"</td>
+                </tr>
+                
+                <tr>
+                    <td>Weight</td>
+                    <td>{{physicalStateDetails.weight}}</td>
+                </tr>
+                <tr>
+                    <td>BMI</td>
+                    <td>{{physicalStateDetails.bmi}}</td>
+                </tr>
+                <tr>
+                    <td>SpO2</td>
+                    <td>{{physicalStateDetails.spO2}}</td>
+                </tr>
+                <tr>
+                    <td>Updated On</td>
+                    <td>{{physicalStateDetails.editedOn | date:'dd-MM-YYY'}}</td>
+                </tr>
+                <tr>
+                    <td>Updated By</td>
+                    <td>{{physicalStateDetails.editedBy}}</td>
+                </tr>
+                <tr>
+                    <td>Created On</td>
+                    <td>{{physicalStateDetails.createdOn | date:'dd-MM-YYY'}}</td>
+                </tr>
+                <tr>
+                    <td>Created By</td>
+                    <td>{{physicalStateDetails.createdBy}}</td>
+                </tr>
+                <tr>
+                    <td>Appearance</td>
+                    <td>{{physicalStateDetails.appearance}}</td>
+                </tr>
+                <tr>
+                    <td>Anemia</td>
+                    <td>{{physicalStateDetails.anemia}}</td>
+                </tr>
+                <tr>
+                    <td>Jaundice</td>
+                    <td>{{physicalStateDetails.jaundice}}</td>
+                </tr>
+                <tr>
+                    <td>Dehydration</td>
+                    <td>{{physicalStateDetails.dehydration}}</td>
+                </tr>
+
+                <tr>
+                    <td>Edema</td>
+                    <td>{{physicalStateDetails.edema}}</td>
+                </tr>
+                <tr>
+                    <td>Cyanosis</td>
+                    <td>{{physicalStateDetails.cyanosis}}</td>
+                </tr>
+                <tr>
+                    <td>RBS/FBS</td>
+                    <td>{{physicalStateDetails.rbsFbs}}</td>
+                </tr>
+            </table>
+        </mat-card-content>
+        <mat-card-actions>
+        <button mat-button (click)="goBack()">Back</button>
+        <button mat-button [routerLink]="['../../edit/'+ physicalStateDetails.id]">Edit</button>
+        </mat-card-actions>
+    </mat-card>
+</body>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIj96fiAcnEub+BXgVQ+VzwAAAAACAAAAAAAQZgAAAAEAACAAAAB8vGF0Jwb6fEeKICAjreJvE0k+3bsLzJb/jCiCXr/n3QAAAAAOgAAAAAIAACAAAAB8wyNl0xiG0Thv51Hm9Uvr8kEquUDyhOKnF+upelbB/4AAAACl1oQNVwFrO2QpbaItaTS3XkXvyqhylZkGrRQtXzNlRCvFuKMDerHXh4ATaPzIYSR+MPiMgWCPUknwz+PIRzUjaAKVsoRjM65ReL+S17aN2cYa5Xqy+NQbB2OPB31a3TEs9fu9WoI3RzzfFod6cN4uyKN4Alyh3Jsw5yABHA5wd0AAAADfh8lTy1tpF6sRrvNwBrRiiNGtU6pvLEYMRw1DaByTSaUC63rv68Sjv6/uyWUKp0urD12NbjpRkLsxwovF2Ytc</EncryptedPassword>
+    <History>True|2022-06-28T04:19:11.3069183Z;True|2022-06-17T11:53:15.8719026+06:00;False|2022-06-16T18:31:39.0875931+06:00;True|2022-05-28T04:20:27.7688678+06:00;True|2022-05-13T03:10:28.3630006+06:00;True|2022-05-13T03:05:50.1595800+06:00;True|2022-05-13T02:39:11.9445004+06:00;True|2022-05-13T01:58:05.7217394+06:00;True|2022-05-13T00:56:25.5615718+06:00;True|2022-05-12T21:26:25.1055852+06:00;True|2022-05-05T00:38:42.1969024+06:00;False|2022-05-05T00:31:07.0948893+06:00;False|2022-05-05T00:24:23.5678274+06:00;True|2021-11-15T03:18:39.3919089+06:00;True|2021-11-15T03:15:55.2447689+06:00;True|2021-11-15T03:10:41.2559501+06:00;True|2021-11-15T03:07:12.9139678+06:00;False|2021-11-15T03:06:20.0630018+06:00;False|2021-11-15T03:05:30.0999479+06:00;True|2021-11-15T03:03:39.7199643+06:00;True|2021-11-15T02:59:15.1609747+06:00;True|2021-11-15T02:57:40.6490992+06:00;True|2021-11-15T02:54:00.4415312+06:00;True|2021-11-15T02:52:07.0175582+06:00;True|2021-11-15T02:50:20.6621834+06:00;True|2021-11-15T02:47:47.9459905+06:00;True|2021-11-15T02:21:13.5470030+06:00;True|2021-11-15T01:44:05.2535441+06:00;True|2021-11-15T01:12:28.2209967+06:00;True|2021-11-15T01:08:15.6977983+06:00;True|2021-11-15T01:06:38.4774992+06:00;True|2021-11-15T01:04:18.2323193+06:00;True|2021-11-15T01:02:14.8890310+06:00;True|2021-11-15T01:00:10.8519871+06:00;True|2021-11-15T00:57:04.6430861+06:00;False|2021-11-15T00:55:39.5451244+06:00;True|2021-11-15T00:47:15.2522664+06:00;True|2021-11-15T00:41:05.3413188+06:00;True|2021-11-15T00:10:02.6752499+06:00;True|2021-11-15T00:03:33.0304719+06:00;True|2021-11-14T23:58:17.2428164+06:00;True|2021-11-14T23:41:37.6866939+06:00;True|2021-11-14T22:58:54.4331138+06:00;True|2021-11-07T22:01:18.7359007+06:00;True|2021-10-29T23:46:30.2509767+06:00;True|2021-10-26T22:44:40.6918898+06:00;True|2021-10-13T20:32:15.4948084+06:00;True|2021-10-09T06:17:08.2618532+06:00;False|2021-10-09T06:09:42.4874778+06:00;False|2021-10-09T05:45:17.0491120+06:00;True|2021-10-01T23:45:41.4461456+06:00;True|2021-10-01T23:36:40.7538592+06:00;True|2021-08-25T21:41:20.4813116+06:00;True|2021-08-25T02:19:44.3553399+06:00;True|2021-08-24T23:33:12.3090948+06:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="HospitalContext">
+      <Value>Server=outreachhospitaldbserver.database.windows.net%3bInitial Catalog=OutreachHospicalTestDB%3bUser ID=sqladmin%3bPassword=0utReach%40123%3bMultipleActiveResultSets=True%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="HospitalAPI.DataAccess.Data.ApplicationDbContext">
+      <Value>Server=outreachhospitaldbserver.database.windows.net%3bInitial Catalog=OutreachHospicalTestDB%3bUser ID=sqladmin%3bPassword=0utReach%40123%3bMultipleActiveResultSets=True%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

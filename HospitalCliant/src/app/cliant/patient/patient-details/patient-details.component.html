@@ -1,0 +1,216 @@
+<button mat-button (click)="goBack()" >Back</button>
+<body class="userdetails">
+    <app-title [title]="title"></app-title>
+    <mat-card class="example-card">
+        <mat-card-header>
+        <h2 style="float: left; width: 80%;">{{patientDetails.firstName}} {{patientDetails.lastName}}</h2>
+            <button style="float: right; width: 20%;" mat-button [routerLink]="['../../history/' + patientDetails.id]" >History</button>
+        </mat-card-header>
+        <mat-card-content>
+            <table class="table">
+                <tr>
+                <td>ID </td>
+                <td>{{patientDetails.id}}</td>
+                </tr>
+                <tr>
+                    <td>Hospital Name</td>
+                    <td>{{patientDetails.hospitalName}}</td>
+                </tr>
+                
+                <tr>
+                    <td>Branch Name </td>
+                    <td>{{patientDetails.branchName}}</td>
+                </tr>
+                <tr>
+                    <td>Membership Registration Number</td>
+                    <td>{{patientDetails.membershipRegistrationNumber}}</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>{{patientDetails.age}}</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td>{{patientDetails.mobileNumber}}</td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td>{{patientDetails.doB | date:'dd-MM-YYY'}}</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>{{patientDetails.gender}}</td>
+                </tr>
+                <tr>
+                    <td>Marital Status</td>
+                    <td>{{patientDetails.maritalStatus}}</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        {{patientDetails.address}} 
+                        <strong>Division:</strong>  {{patientDetails.division}}
+                        <strong>District:</strong>  {{patientDetails.district}}
+                        <strong>Upazila:</strong>  {{patientDetails.upazila}} 
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>NID</td>
+                    <td>{{patientDetails.nid}}</td>
+                    </tr>
+                <tr>
+                    <td>Blood Group</td>
+                    <td>{{patientDetails.bloodGroup}}</td>
+                </tr>
+                <tr>
+                    <td>COVID-19 Vaccination</td>
+                    <td>
+                        <span *ngIf="patientDetails.covidvaccine==='1'">Yes 
+                            <span *ngIf="patientDetails.vaccineBrand==='1'">(Pfizer)</span>
+                            <span *ngIf="patientDetails.vaccineBrand==='2'">(Astrazeneca)</span>
+                            <span *ngIf="patientDetails.vaccineBrand==='3'">(Moderna)</span>
+                            <span *ngIf="patientDetails.vaccineBrand==='4'">(Sinopharm)</span>
+                            <span *ngIf="patientDetails.vaccineBrand==='5'">(Others)</span>
+                          </span>
+                         <span *ngIf="patientDetails.covidvaccine==='2'">No</span>
+                         <span *ngIf="!patientDetails.covidvaccine">No Data</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dose With Date
+                    </td>
+                    <td>
+                        <span *ngIf="patientDetails.firstDoseDate">
+                            1st Dose: {{patientDetails.firstDoseDate | date:'dd-MM-YYY'}}
+                        </span>
+                        <span *ngIf="patientDetails.secondDoseDate">
+                            2nd Dose: {{patientDetails.secondDoseDate | date:'dd-MM-YYY'}}
+                        </span>
+                        <span *ngIf="patientDetails.bosterDoseDate">
+                            Boster Dose: {{patientDetails.bosterDoseDate | date:'dd-MM-YYY'}}
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Updated On</td>
+                    <td>{{patientDetails.updatedOn | date:'dd-MM-YYY'}}</td>
+                </tr>
+                <tr>
+                    <td>Updated By</td>
+                    <td>{{patientDetails.updatedBy}}</td>
+                </tr>
+                <tr>
+                    <td>Created On</td>
+                    <td>{{patientDetails.createdOn | date:'dd-MM-YYY'}}</td>
+                </tr>
+                <tr>
+                    <td>Created By</td>
+                    <td>{{patientDetails.createdBy}}</td>
+                </tr>
+                <tr>
+                    <td>Note</td>
+                    <td>{{patientDetails.note}}</td>
+                </tr>
+                <tr>
+                    <td>Primary Member</td>
+                    <td><mat-checkbox style="margin-left: 10px;" disabled [checked] = patientDetails.primaryMember></mat-checkbox></td>
+                </tr>
+                <tr>
+                    <td>Active</td>
+                    <td><mat-checkbox style="margin-left: 10px;" disabled [checked] = patientDetails.isActive></mat-checkbox></td>
+                </tr>
+            </table>
+        </mat-card-content>
+        <mat-card-actions>
+        <button mat-button (click)="goBack()" >Back</button>
+        <button mat-button [routerLink]="['../../edit/'+ patientDetails.id]">Edit</button>
+        </mat-card-actions>
+    </mat-card>
+    <mat-divider></mat-divider>
+    <ng-container *ngFor="let patientVital of patientDetails.physicalStat">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <h2>Physical Stat</h2>
+            </mat-card-header>
+            <mat-card-content>
+                <table class="table">
+                    <tr>
+                    <td>Height</td>
+                    <td>{{patientVital.heightFeet}}" {{patientVital.heightInches}}'</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>{{patientVital.weight}}</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>BMI</td>
+                        <td>{{patientVital.bmi}}</td>
+                    </tr>
+                    <tr>
+                        <td>Body Temparature</td>
+                        <td>{{patientVital.bodyTemparature}}</td>
+                    </tr>
+                    <tr>
+                        <td>Blood Pressure</td>
+                        <td>{{patientVital.bloodPressureSystolic}}/{{patientVital.bloodPressureDiastolic}} mmHg</td>
+                    </tr>
+                    <tr>
+                        <td>Pulse Rate</td>
+                        <td>{{patientVital.pulseRate}}</td>
+                    </tr>
+                    <tr>
+                        <td>SpO2</td>
+                        <td>{{patientVital.spO2}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Last Updated</td>
+                        <td>{{patientVital.editedOn | date:'dd-MM-YYY'}}</td>
+                    </tr>
+                    <tr>
+                        <td>Updated By</td>
+                        <td>{{patientVital.editedBy}}</td>
+                    </tr>
+                    <tr>
+                        <td>Hospital</td>
+                        <td>{{patientVital.hospitalName}}</td>
+                    </tr>
+                    <!-- ksjdh -->
+                    <tr>
+                        <td>Anemia</td>
+                        <td>{{patientVital.anemia}}</td>
+                    </tr>
+                    <tr>
+                        <td>Jaundice</td>
+                        <td>{{patientVital.jaundice}}</td>
+                    </tr>
+                    <tr>
+                        <td>Dehydration</td>
+                        <td>{{patientVital.dehydration}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>RBS/FBS</td>
+                        <td>{{patientVital.rbsFbs}}</td>
+                    </tr>
+                    <!-- <tr>
+                        <td>P/A</td>
+                        <td>{{patientVital.pa}}</td>
+                    </tr>
+                    <tr>
+                        <td>B/B</td>
+                        <td>{{patientVital.bb}}</td>
+                    </tr> -->
+                </table>
+            </mat-card-content>
+            <mat-card-actions>
+           
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+
+</body>
+

@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/HospitalAPI/HospitalAPI/obj
+/HospitalAPI/HospitalAPI.Core/obj
+/HospitalAPI/HospitalAPI.DataAccess/obj
+/HospitalAPI/.vs/HospitalAPI
+/HospitalAPI/HospitalAPI/bin/Debug/net5.0
+/HospitalAPI/HospitalAPI.Core/bin/Debug/net5.0
+/HospitalAPI/HospitalAPI.DataAccess/bin/Debug/net5.0
+/HospitalCliant/.vscode
+/HospitalCliant_Old/.vscode
+/HospitalAPI/HospitalAPI.Core/bin/Release/net5.0
+/HospitalAPI/HospitalAPI.DataAccess/bin/Release/net5.0
+/HospitalAPI/HospitalAPI/bin/Release/net5.0
+/HospitalAPI/HospitalAPI/appsettings.prod.json
+/HospitalAPI/HospitalAPI/appsettings.prod.Development.json

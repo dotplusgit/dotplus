@@ -1,0 +1,52 @@
+=> Request Name: Patient Tally Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-05:29:08,
+...Status:Ok, Ok
+=> Request Name: Patient Tally Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-05:29:09,
+...Status:Ok, Ok
+=> Request Name: Patient Tally Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-05:47:29,
+...Status:Ok, Ok
+=> Request Name: Patient Tally Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-05:47:30,
+...Status:Ok, Ok
+=> Request Name: Prescription Tally Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-05:47:43,
+...Status:Ok, Ok
+=> Request Name: Prescription Tally Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-05:47:44,
+...Status:Ok, Ok
+=> Request Name: Diagnosis Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-05:47:51,
+...Status:Ok, Ok
+=> Request Name: Diagnosis Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-05:47:51,
+...Status:Ok, Ok
+=> Request Name: Medical Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-05:48:35,
+...Status:Ok, Ok
+=> Request Name: Medical Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-05:48:36,
+...Status:Ok, Ok
+=> Request Name: Telemedicine Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-05:48:53,
+...Status:Ok, Ok
+=> Request Name: Telemedicine Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-05:48:53,
+...Status:Ok, Ok
+=> Request Name: Diagnosis Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-06:35:19,
+...Status:Ok, Ok
+=> Request Name: Diagnosis Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-06:35:19,
+...Status:Ok, Ok
+=> Request Name: Diagnosis Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-06:39:21,
+...Status:Ok, Ok
+=> Request Name: Diagnosis Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-06:39:21,
+...Status:Ok, Ok
+=> Request Name: Patient Tally Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-06:39:30,
+...Status:Ok, Ok
+=> Request Name: Patient Tally Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-06:39:30,
+...Status:Ok, Ok
+=> Request Name: Prescription Tally Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-06:39:40,
+...Status:Ok, Ok
+=> Request Name: Prescription Tally Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-06:39:40,
+...Status:Ok, Ok
+=> Request Name: Diagnosis Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-06:39:44,
+...Status:Ok, Ok
+=> Request Name: Diagnosis Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-06:39:44,
+...Status:Ok, Ok
+=> Request Name: Medical Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-06:39:52,
+...Status:Ok, Ok
+=> Request Name: Medical Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-06:39:53,
+...Status:Ok, Ok
+=> Request Name: Telemedicine Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Request: 26/05/2022-06:40:03,
+...Status:Ok, Ok
+=> Request Name: Telemedicine Report, Name: Doctor , email: doctor@gmail.com, Hospital: , Response: 26/05/2022-06:40:03,
+...Status:Ok, Ok

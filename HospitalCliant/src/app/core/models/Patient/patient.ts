@@ -1,0 +1,34 @@
+    export interface IPatient {
+        id: number;
+        hospitalId: number;
+        hospitalName: string;
+        firstName: string;
+        lastName: string;
+        age: string;
+        mobileNumber: string;
+        doB: Date;
+        gender: string;
+        maritalStatus: string;
+        primaryMember: boolean;
+        membershipRegistrationNumber:string;
+        address: string;
+        divisionId: number;
+        division: string;
+        upazilaId: number;
+        upazila: string;
+        districtId: number;
+        district: string;
+        nid: string;
+        bloodGroup: string;
+        branchId: number;
+        branchName: string;
+        isActive: boolean;
+        covidvaccine: string;
+        vaccineBrand: string;
+        note: string;
+        createdOn: Date;
+        createdBy: string;
+        userName: string;
+        updatedOn: Date;
+        updatedBy: string;
+    }

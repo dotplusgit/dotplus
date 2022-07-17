@@ -1,0 +1,117 @@
+<hr>
+<app-title [title]="title"></app-title>
+<form>
+  <mat-form-field class="form-id" appearance="fill">
+    <mat-label>ID</mat-label>
+    <input type="number" matInput
+                        readonly
+                        aria-label="ID"
+                        [matAutocomplete]="autoID"
+                        [formControl]="medicineID">
+    <mat-autocomplete #autoID="matAutocomplete">
+        <mat-option *ngFor="let medicine of filteredMedicineByID | async"  (click)="selectMedicine(medicine)">
+          <span>{{medicine.id}}</span> |
+          <span>{{medicine.brandName}}</span> |
+          <small>{{medicine.genericName}}</small>
+        </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <mat-form-field class="form-brand-name" appearance="fill">
+      <mat-label>Brand Name</mat-label>
+      <input type="text" matInput
+                          aria-label="BrandName"
+                          [matAutocomplete]="autobrandName"
+                          [formControl]="brandName">
+      <mat-autocomplete #autobrandName="matAutocomplete">
+        <mat-option *ngFor="let medicine of filteredMedicine | async"  (click)="selectMedicine(medicine)">
+          <span>{{medicine.id}}</span> |
+          <span>{{medicine.brandName}}</span> |
+          <small>{{medicine.genericName}}</small>
+        </mat-option>
+      </mat-autocomplete>
+  </mat-form-field>
+
+  <mat-form-field class="form-generic-name" appearance="fill">
+    <mat-label>Generic Name</mat-label>
+    <input type="text" matInput
+                        aria-label="GenericName"
+                        [matAutocomplete]="autoGenericName"
+                        [formControl]="genericName">
+    <mat-autocomplete #autoGenericName="matAutocomplete">
+        <mat-option *ngFor="let medicine of filteredMedicineByGname | async"  (click)="selectMedicine(medicine)">
+          <span>{{medicine.id}}</span> |
+          <span>{{medicine.brandName}}</span> |
+          <small>{{medicine.genericName}}</small>
+        </mat-option>
+      </mat-autocomplete>
+  </mat-form-field>
+  <mat-form-field class="form-stock" appearance="fill">
+    <mat-label>Total Stock</mat-label>
+    <input readonly type="number" matInput [formControl]="currentStock">
+  </mat-form-field>
+
+  <mat-form-field class="form-quantity" appearance="fill">
+    <mat-label>Quantity</mat-label>
+    <input type="number" matInput [formControl]="quantity" (input)="calculateItemTotal()">
+  </mat-form-field>
+  <mat-form-field class="form-quantity" appearance="fill">
+    <mat-label>Item Total</mat-label>
+    <input type="number" matInput [formControl]="itemTotal">
+  </mat-form-field>
+
+  <button class="addbutton" mat-raised-button (click)="addMedicinetoLine()">ADD</button>
+</form>
+<hr>
+<form [formGroup]="medicinePurchaseForm" (ngSubmit)="onSubmit()" novalidate *ngIf="medicinePurchaseForm">
+    <div id="print-section" formArrayName="purchaseMedicineList">
+
+        <table>
+          <tr>
+            <th>NAME</th>
+            <th>QUANTITY</th>
+            <th>UNIT PRICE</th>
+            <th>TOTAL PRICE</th>
+            <th>DELETE</th>
+          </tr>
+          <tr *ngFor="let medicine of medicinePurchaseForm.controls['purchaseMedicineList'].controls; index as t" [formGroupName]="t" >
+              <td>
+                  <input formControlName="medicineName" readonly matInput />
+              </td>
+              <td>
+                  <input formControlName="quantity" readonly matInput />
+              </td>
+              <td>
+                  <input formControlName="unitPrice" readonly matInput />
+              </td>
+              <td>
+                  <input formControlName="itemTotal" readonly matInput />
+              </td>
+              <td (click)="onDelete(t)" matTooltip="Delete" class="iconchange">
+                <mat-icon>delete</mat-icon>
+            </td>
+          </tr>
+          <tr>
+            <td><mat-divider></mat-divider></td>
+            <td><mat-divider></mat-divider></td>
+            <td><mat-divider></mat-divider></td>
+            <td><mat-divider></mat-divider></td>
+            <td><mat-divider></mat-divider></td>
+          </tr>
+          <tr>
+            <td>Total:</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{totalPrice}}</td>
+          </tr>
+        </table>
+    </div>
+    <button mat-raised-button
+            color="accent"
+            [useExistingCss]="true" 
+            printSectionId="print-section"  
+            ngxPrint
+            class="addbutton"
+            type="submit">SAVE & PRINT</button>
+</form>

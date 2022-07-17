@@ -1,0 +1,50 @@
+
+.mat-form-field {
+    width: 330px;
+    margin: 5px;
+    padding: 10px;
+}
+.loginForm {
+    height: 100%;
+    align-items: center;
+    padding-bottom: 40px;  
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+}
+button {
+
+    margin: 5px;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    color: #787878;
+    height: 45px;
+	border: 1px solid black !important;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.active{
+    width: 330px;
+    margin: 5px;
+    padding: 10px;
+}
+.addbutton {
+    width: 330px;
+    background-color: #fff;
+    color: #787878;
+}
+
+button :hover {
+    color: black;
+}
+.patientid{
+    width: 230px;
+    float: left;
+}
+.loadbutton {
+    width: 110px;
+    float: right;
+    margin-top: 20px;
+}
